@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroScreen">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="3dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="5dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="5dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="5dp" />
+
+    <TextView
+        android:id="@+id/pd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text=" Personal Details"
+        android:layout_marginLeft="5dp"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        app:layout_constraintBottom_toTopOf="@+id/Next"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/pd">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            tools:targetApi="lollipop">
+
+            <RelativeLayout
+                android:gravity="left"
+                android:foregroundGravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fnametxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="First Name"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fname"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fnametxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/fname"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/dobtxt"
+                    android:layout_below="@id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Date Of Birth"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dob"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dobtxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/dob"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/CNICtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="CNIC"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/CNIC"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/CNICtxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/CNIC"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Emailtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view2"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Email"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Email"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Emailtxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Email"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Father_Namext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view4"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Father's Name"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Father_Name"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Father_Namext"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Father_Name"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Mother_Namext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view6"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Mother's Name"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Mother_Name"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Mother_Namext"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Mother_Name"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Patxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view8"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Permenant Address"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/pa"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Patxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/pa"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            tools:targetApi="lollipop">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                android:foregroundGravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lnametxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Last Name"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/lname"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lnametxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/lname"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/gendertxt"
+                    android:layout_below="@id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Gender"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/gender1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gendertxt"
+                    android:text="Male"
+                    android:textColor="#c2c2c2"
+                    android:textSize="10sp" />
+                <RadioButton
+                    android:id="@+id/gender"
+                    android:textColor="#c2c2c2"
+                    android:layout_toRightOf="@+id/gender1"
+                    android:layout_below="@id/gendertxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="Female" />
+
+                <TextView
+                    android:id="@+id/nationaltxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gender"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Nationality"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/national"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nationaltxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/national"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/phone_notxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view3"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Phone No"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/phone_no"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone_notxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/phone_no"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Father_CNICxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view5"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Father's CNIC"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Father_CNIC"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Father_CNICxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Father_CNIC"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Mother_CNICxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view7"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Mother's CNIC"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Mother_CNIC"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Mother_CNICxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Mother_CNIC"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Tatxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view9"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Temporary Address"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ta"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Tatxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ta"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#210853"
+        android:gravity="left"
+        android:text="NEXT"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.930"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:ignore="RtlCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

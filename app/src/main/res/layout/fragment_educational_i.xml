@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroScreen">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="3dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="5dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="5dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="5dp" />
+
+    <TextView
+        android:id="@+id/Ed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text=" Education Details"
+        android:layout_marginLeft="5dp"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <TextView
+        android:id="@+id/intermediate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text=" intermediate"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/Ed"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        app:layout_constraintBottom_toTopOf="@+id/Next"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/intermediate">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            tools:targetApi="lollipop">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                android:foregroundGravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Bnametxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Board Name"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Bname"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Bnametxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Bname"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Snametxt"
+                    android:layout_below="@id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="College Name"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Sname"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Snametxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Sname"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/MOtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v1"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Marks Obtained"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/MO"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/MOtxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/MO"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/TMtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view3"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Total Marks"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/TM"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TMtxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/TM"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:id="@+id/Perxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view5"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Percentage"
+                    android:textColor="#c2c2c2"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Per"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Perxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/Per"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="44dp"
+                    android:background="#d5d5d5" />
+
+                <Button
+                    android:id="@+id/UploadFiles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Certificates"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_below="@id/view7"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#210853"
+                    android:gravity="center_horizontal" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#210853"
+        android:gravity="left"
+        android:text="NEXT"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.930"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:ignore="RtlCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

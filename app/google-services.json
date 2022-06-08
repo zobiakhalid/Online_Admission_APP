@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1045352552701",
+    "project_id": "online-admission-system-74fd4",
+    "storage_bucket": "online-admission-system-74fd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045352552701:android:e7867d56e6d2d21cc90694",
+        "android_client_info": {
+          "package_name": "com.zobiakhalid.ui_chatting_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045352552701-ial69omcvi9i1gts5uvqibeqcf7lnd0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC37LrmjPw4GtrBjaE3fKArCqZZgUSsD6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045352552701-ial69omcvi9i1gts5uvqibeqcf7lnd0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

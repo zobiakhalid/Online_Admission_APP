@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroScreen">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="3dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="5dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="5dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="5dp" />
+
+
+    <TextView
+        android:id="@+id/Pro"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text=" Admission Challan"
+        android:layout_marginLeft="5dp"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        app:layout_constraintBottom_toTopOf="@+id/Submit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/Pro">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            tools:targetApi="lollipop">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:layout_marginTop="30dp"
+                android:foregroundGravity="right"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Create"
+                    android:layout_width="215dp"
+                    android:layout_height="wrap_content"
+                    android:text="Create Challan"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#210853"
+                    android:gravity="center_horizontal" />
+                <Button
+                    android:id="@+id/Download"
+                    android:layout_below="@id/Create"
+                    android:layout_width="215dp"
+                    android:layout_height="wrap_content"
+                    android:text="Download Challan"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#210853"
+                    android:gravity="center_horizontal" />
+
+                <Button
+                    android:id="@+id/Upload"
+                    android:layout_below="@id/Download"
+                    android:layout_width="215dp"
+                    android:layout_height="wrap_content"
+                    android:text="Uplaod Paid Challan"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#210853"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/Detailtxt"
+                    android:layout_below="@id/Upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="After submiting the form. your online form will be subitted. we'll contact you related to Form details through mobile phonr or email. "
+                    android:textColor="#c2c2c2"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/Detail1txt"
+                    android:layout_below="@id/Detailtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Best Regards ABC University"
+                    android:textColor="#c2c2c2"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="#210853"
+        android:gravity="left"
+        android:text="Submit Form"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.930"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:ignore="RtlCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
